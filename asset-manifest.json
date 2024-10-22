@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5bb811b4.css",
+    "main.js": "/static/js/main.6e6e1692.js",
+    "static/media/antiaq.png": "/static/media/antiaq.0dd7f3d9177c121ae90a.png",
+    "static/media/zoelys.png": "/static/media/zoelys.4327e71f03e9f9d168e0.png",
+    "static/media/evoque.png": "/static/media/evoque.587bd7743267c301b527.png",
+    "static/media/evoque-2.jpg": "/static/media/evoque-2.5fe3096d71f3759591db.jpg",
+    "static/media/evoque-1.jpg": "/static/media/evoque-1.e37defa23b55338c256c.jpg",
+    "index.html": "/index.html",
+    "main.5bb811b4.css.map": "/static/css/main.5bb811b4.css.map",
+    "main.6e6e1692.js.map": "/static/js/main.6e6e1692.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bb811b4.css",
+    "static/js/main.6e6e1692.js"
+  ]
+}
