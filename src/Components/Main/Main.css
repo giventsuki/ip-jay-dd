@@ -1,0 +1,15 @@
+.main .container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .main .container {
+    width: 750px;
+  }
+}
+@media (max-width: 480px) {
+  .main .container {
+    width: 460px;
+  }
+}/*# sourceMappingURL=Main.css.map */

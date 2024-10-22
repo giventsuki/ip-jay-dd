@@ -1,0 +1,306 @@
+@charset "UTF-8";
+.catalog .catalog-title {
+  font-size: 50px;
+  text-align: center;
+}
+.catalog .grid {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-wrapper .close-button {
+  position: absolute;
+  top: 15%;
+  right: 13%;
+  font-size: 50px;
+  cursor: pointer;
+  z-index: 10;
+}
+.modal-wrapper .modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  overflow-y: auto;
+}
+.modal-wrapper .modal-content .modal-swiper {
+  width: 100%; /* Занимаем всю доступную ширину контейнера */
+}
+.modal-wrapper .modal-content .modal-swiper .modal-swiper-slide {
+  width: 100%;
+}
+.modal-wrapper .modal-content .modal-img {
+  width: 80%;
+  margin: 0 auto;
+}
+.modal-wrapper .modal-content .modal-info {
+  width: 70%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.modal-wrapper .modal-content .modal-info span {
+  font-size: 22px;
+  font-weight: 600;
+}
+.modal-wrapper .modal-content .modal-info .modal-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+.modal-wrapper .modal-content .modal-info .modal-description {
+  font-size: 20px;
+}
+.modal-wrapper .modal-content .modal-info .modal-price {
+  font-size: 30px;
+  font-weight: 700;
+}
+.modal-wrapper .modal-content .modal-info .modal-order {
+  display: flex;
+  gap: 30px;
+}
+.modal-wrapper .modal-content .modal-info .modal-order .modal-link {
+  margin: 5px 0;
+  font-size: 24px;
+}
+.modal-wrapper .modal-content .modal-info .modal-order .modal-link:hover {
+  color: red;
+  transform: scale(1.02);
+}
+.modal-wrapper .modal-content .modal-info .modal-extra-info .modal-extra-description {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    padding: 0 5px;
+  }
+  .catalog .catalog-title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .catalog .grid {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-wrapper .close-button {
+    position: absolute;
+    top: 12%;
+    right: 14%;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .modal-wrapper .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    height: 80vh;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Добавляем отступ между слайдером и контентом */
+  }
+  .modal-wrapper .modal-content .modal-swiper {
+    width: 100%;
+    height: 60%;
+  }
+  .modal-wrapper .modal-content .modal-swiper .modal-swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .modal-wrapper .modal-content .modal-swiper .modal-swiper-slide .modal-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .modal-wrapper .modal-content .modal-info {
+    width: 100%;
+    padding: 42% 5% 0;
+    height: 40%; /*Занимаем 40% высоты модального окна */
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .modal-wrapper .modal-content .modal-info span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-description {
+    font-size: 16px;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-price {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-order {
+    display: flex;
+    gap: 30px;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-order .modal-link {
+    margin: 5px 0;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-order .modal-link:hover {
+    color: red;
+    transform: scale(1.02);
+  }
+  .modal-wrapper .modal-content .modal-info .modal-extra-info .modal-extra-description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .catalog {
+    padding: 0 5px;
+  }
+  .catalog .catalog-title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .catalog .grid {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal-wrapper .close-button {
+    position: absolute;
+    top: 6%;
+    right: 8%;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .modal-wrapper .modal-content {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    height: 90vh;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .modal-wrapper .modal-content .modal-swiper {
+    width: 100%;
+    height: 45%; /* Устанавливаем высоту 50% от модального окна */
+  }
+  .modal-wrapper .modal-content .modal-swiper .modal-swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Занимает всю доступную высоту Swiper */
+  }
+  .modal-wrapper .modal-content .modal-swiper .modal-swiper-slide .modal-img {
+    max-width: 90%; /* Ограничиваем максимальную ширину изображения */
+    max-height: 90%; /* Ограничиваем максимальную высоту изображения */
+    -o-object-fit: contain;
+       object-fit: contain; /* Сохраняем пропорции */
+  }
+  .modal-wrapper .modal-content .modal-info {
+    width: 100%;
+    padding: 75% 5% 0;
+    height: 40%; /* Высота оставшегося места */
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .modal-wrapper .modal-content .modal-info span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-description {
+    font-size: 16px;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-price {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-order {
+    display: flex;
+    gap: 30px;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-order .modal-link {
+    margin: 5px 0;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  .modal-wrapper .modal-content .modal-info .modal-order .modal-link:hover {
+    color: red;
+    transform: scale(1.02);
+  }
+  .modal-wrapper .modal-content .modal-info .modal-extra-info .modal-extra-description {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=Catalog.css.map */

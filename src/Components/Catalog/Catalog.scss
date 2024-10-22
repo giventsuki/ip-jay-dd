@@ -1,0 +1,313 @@
+.catalog {
+  .catalog-title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .grid {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  .close-button {
+    position: absolute;
+    top: 15%;
+    right: 13%;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    overflow-y: auto;
+    .modal-swiper {
+      width: 100%; /* Занимаем всю доступную ширину контейнера */
+      .modal-swiper-slide {
+        width: 100%;
+      }
+    }
+    .modal-img {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .modal-info {
+      width: 70%;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      span {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .modal-title {
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .modal-description {
+        font-size: 20px;
+      }
+      .modal-price {
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .modal-order {
+        display: flex;
+        gap: 30px;
+        .modal-link {
+          margin: 5px 0;
+          font-size: 24px;
+          &:hover {
+            color: red;
+            transform: scale(1.02);
+          }
+        }
+      }
+      .modal-extra-info {
+        .modal-extra-description {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .catalog {
+    padding: 0 5px;
+    .catalog-title {
+      font-size: 50px;
+      text-align: center;
+    }
+    .grid {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    .close-button {
+      position: absolute;
+      top: 12%;
+      right: 14%;
+      font-size: 50px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      height: 80vh;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Добавляем отступ между слайдером и контентом */
+      .modal-swiper {
+        width: 100%;
+        height: 60%;
+        .modal-swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          .modal-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .modal-info {
+        width: 100%;
+        padding: 42% 5% 0;
+        height: 40%; /*Занимаем 40% высоты модального окна */
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .modal-title {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        .modal-description {
+          font-size: 16px;
+        }
+        .modal-price {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        .modal-order {
+          display: flex;
+          gap: 30px;
+          .modal-link {
+            margin: 5px 0;
+            font-size: 24px;
+            transition: color 0.3s, transform 0.3s;
+            &:hover {
+              color: red;
+              transform: scale(1.02);
+            }
+          }
+        }
+        .modal-extra-info {
+          .modal-extra-description {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog {
+    padding: 0 5px;
+    .catalog-title {
+      font-size: 50px;
+      text-align: center;
+    }
+    .grid {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    .close-button {
+      position: absolute;
+      top: 6%;
+      right: 8%;
+      font-size: 50px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .modal-content {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      width: 90%;
+      height: 90vh;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .modal-swiper {
+        width: 100%;
+        height: 45%; /* Устанавливаем высоту 50% от модального окна */
+        .modal-swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%; /* Занимает всю доступную высоту Swiper */
+          .modal-img {
+            max-width: 90%; /* Ограничиваем максимальную ширину изображения */
+            max-height: 90%; /* Ограничиваем максимальную высоту изображения */
+            object-fit: contain; /* Сохраняем пропорции */
+          }
+        }
+      }
+
+      .modal-info {
+        width: 100%;
+        padding: 75% 5% 0;
+        height: 40%; /* Высота оставшегося места */
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .modal-title {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        .modal-description {
+          font-size: 16px;
+        }
+        .modal-price {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        .modal-order {
+          display: flex;
+          gap: 30px;
+          .modal-link {
+            margin: 5px 0;
+            font-size: 24px;
+            transition: color 0.3s, transform 0.3s;
+            &:hover {
+              color: red;
+              transform: scale(1.02);
+            }
+          }
+        }
+        .modal-extra-info {
+          .modal-extra-description {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
