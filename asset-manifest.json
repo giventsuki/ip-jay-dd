@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ip-jay-dd/static/css/main.5bb811b4.css",
+    "main.js": "/ip-jay-dd/static/js/main.37485d24.js",
+    "static/media/antiaq.png": "/ip-jay-dd/static/media/antiaq.0dd7f3d9177c121ae90a.png",
+    "static/media/zoelys.png": "/ip-jay-dd/static/media/zoelys.4327e71f03e9f9d168e0.png",
+    "static/media/evoque.png": "/ip-jay-dd/static/media/evoque.587bd7743267c301b527.png",
+    "static/media/evoque-2.jpg": "/ip-jay-dd/static/media/evoque-2.5fe3096d71f3759591db.jpg",
+    "static/media/evoque-1.jpg": "/ip-jay-dd/static/media/evoque-1.e37defa23b55338c256c.jpg",
+    "index.html": "/ip-jay-dd/index.html",
+    "main.5bb811b4.css.map": "/ip-jay-dd/static/css/main.5bb811b4.css.map",
+    "main.37485d24.js.map": "/ip-jay-dd/static/js/main.37485d24.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bb811b4.css",
+    "static/js/main.37485d24.js"
+  ]
+}
