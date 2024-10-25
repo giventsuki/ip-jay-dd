@@ -7,6 +7,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'; // Стили для навигации
 import 'swiper/css/pagination'; // Стили для пагинации
 import "./Catalog.css";
+import ContactList from "../Contact/ContactList";
 
 export default function Catalog() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -21,6 +22,8 @@ export default function Catalog() {
     setSelectedCard(null);
     setIsModalOpen(false);
   };
+
+
 
   return (
     <div className="catalog">
@@ -74,10 +77,9 @@ export default function Catalog() {
               <p className="modal-price">
                 <span className="p-title">Цена: </span> {selectedCard.price} тг
               </p>
-              <p className="modal-order">
-                <a href="https://wa.me/7478155105" className="modal-link"><span className="p-title">WhatsApp </span></a>
-                <a href="tel:7478155105" className="modal-link"><span className="p-title">Позвонить </span></a>
-              </p>
+              <div className="modal-order">
+                <ContactList />  
+              </div>
               <div className="modal-extra-info">
                 <p className="modal-extra-description">
                   <span className="p-title">Дополнительная информация: </span> {selectedCard.extraDescription}

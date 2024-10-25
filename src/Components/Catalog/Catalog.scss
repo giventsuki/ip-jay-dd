@@ -79,18 +79,172 @@
       .modal-order {
         display: flex;
         gap: 30px;
-        .modal-link {
-          margin: 5px 0;
-          font-size: 24px;
-          &:hover {
-            color: red;
-            transform: scale(1.02);
+        .contactList {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          .contact-wrapper {
+            width: 30%;
+            .contact-button {
+              font-size: 20px;
+              margin-bottom: 10px;
+              border: 1px solid teal;
+              cursor: pointer;
+            }
+            .contact-content {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              border: 1px solid teal;
+              width: 100%;
+              .contact-link {
+                margin: 5px 0;
+                display: block;
+                font-weight: 500;
+                font-size: 24px;
+              }
+            }
+
+            &.active .contact-content {
+              text-align: center;
+              width: 100%;
+              display: block;
+            }
           }
         }
       }
       .modal-extra-info {
         .modal-extra-description {
           font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .catalog {
+    padding: 0 5px;
+    .catalog-title {
+      font-size: 50px;
+      text-align: center;
+    }
+    .grid {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  .modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    .close-button {
+      position: absolute;
+      top: 15%;
+      right: 15%;
+      font-size: 50px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      height: 90vh;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Добавляем отступ между слайдером и контентом */
+      .modal-swiper {
+        width: 100%;
+        height: 60%;
+        .modal-swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          .modal-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .modal-info {
+        width: 100%;
+        padding: 20% 5% 0;
+        height: 40%; /*Занимаем 40% высоты модального окна */
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        span {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        .modal-title {
+          font-size: 38px;
+          font-weight: 700;
+        }
+        .modal-description {
+          font-size: 24px;
+        }
+        .modal-price {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        .modal-order {
+          .contactList {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .contact-wrapper {
+              width: 30%;
+              .contact-button {
+                font-size: 24px;
+                margin-bottom: 10px;
+                border: 1px solid teal;
+                cursor: pointer;
+              }
+              .contact-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border: 1px solid teal;
+                width: 100%;
+                .contact-link {
+                  margin: 5px 0;
+                  display: block;
+                  font-weight: 500;
+                  font-size: 28px;
+                }
+              }
+
+              &.active .contact-content {
+                text-align: center;
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+        .modal-extra-info {
+          .modal-extra-description {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -131,7 +285,7 @@
       padding: 20px;
       border-radius: 5px;
       width: 80%;
-      height: 80vh;
+      height: 90vh;
       text-align: center;
       position: fixed;
       top: 50%;
@@ -159,7 +313,7 @@
 
       .modal-info {
         width: 100%;
-        padding: 42% 5% 0;
+        padding: 50% 5% 0;
         height: 40%; /*Занимаем 40% высоты модального окна */
         text-align: start;
         display: flex;
@@ -184,13 +338,37 @@
         .modal-order {
           display: flex;
           gap: 30px;
-          .modal-link {
-            margin: 5px 0;
-            font-size: 24px;
-            transition: color 0.3s, transform 0.3s;
-            &:hover {
-              color: red;
-              transform: scale(1.02);
+          .contactList {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .contact-wrapper {
+              width: 30%;
+              .contact-button {
+                font-size: 20px;
+                margin-bottom: 10px;
+                border: 1px solid teal;
+                cursor: pointer;
+              }
+              .contact-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border: 1px solid teal;
+                width: 100%;
+                .contact-link {
+                  margin: 5px 0;
+                  display: block;
+                  font-weight: 500;
+                  font-size: 24px;
+                }
+              }
+
+              &.active .contact-content {
+                text-align: center;
+                width: 100%;
+                display: block;
+              }
             }
           }
         }
@@ -267,7 +445,7 @@
 
       .modal-info {
         width: 100%;
-        padding: 75% 5% 0;
+        padding: 80% 5% 0;
         height: 40%; /* Высота оставшегося места */
         text-align: start;
         display: flex;
@@ -292,13 +470,35 @@
         .modal-order {
           display: flex;
           gap: 30px;
-          .modal-link {
-            margin: 5px 0;
-            font-size: 24px;
-            transition: color 0.3s, transform 0.3s;
-            &:hover {
-              color: red;
-              transform: scale(1.02);
+          .contactList {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .contact-wrapper {
+              width: 30%;
+              .contact-button {
+                font-size: 16px;
+                margin-bottom: 10px;
+                border: 1px solid teal;
+                cursor: pointer;
+              }
+              .contact-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border: 1px solid teal;
+                width: 100%;
+                .contact-link {
+                  display: block;
+                  font-size: 16px;
+                }
+              }
+
+              &.active .contact-content {
+                text-align: center;
+                width: 100%;
+                display: block;
+              }
             }
           }
         }
